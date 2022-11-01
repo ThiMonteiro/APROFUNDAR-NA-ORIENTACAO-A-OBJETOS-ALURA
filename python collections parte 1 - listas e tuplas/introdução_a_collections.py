@@ -177,6 +177,7 @@ conta_da_rhe.deposita(1000)
 #     # print(conta)
 
 #---------------------------------------------------------------------------------#
+
 # Herança e Polimorfismo
 
 from abc import ABCMeta, abstractmethod
@@ -208,6 +209,7 @@ class ContaPoupanca(Conta):
         self._saldo *= 1.01
         self._saldo -= 3
 
+
 class ContaInvestimento(Conta):
     pass
 
@@ -233,39 +235,39 @@ import array as arr
 
 # print(arr.array('d', [1, 3.5]))
 
-import numpy as np
+# import numpy as np
 
-numeros = np.array([1, 3.5])
+# numeros = np.array([1, 3.5])
 # print(numeros)
 
-soma = numeros + 3
+# soma = numeros + 3
 
 # print(soma)
 
 
-class ContaSalario:
-    def __init__(self, codigo):
-        self._codigo = codigo
-        self._saldo = 0
+# class ContaSalario:
+#     def __init__(self, codigo):
+#         self._codigo = codigo
+#         self._saldo = 0
+#
+#     def __eq__(self, other):
+#         if type(other) != ContaSalario:
+#             return False
+#
+#         return self._codigo == other._codigo and self._saldo == other._saldo
+#
+#
+#     def deposita(self, valor):
+#         self._saldo += valor
+#
+#     def __str__(self):
+#         return "[>> Codigo {} Saldo {}]".format(self._codigo, self._saldo)
 
-    def __eq__(self, other):
-        if type(other) != ContaSalario:
-            return False
 
-        return self._codigo == other._codigo and self._saldo == other._saldo
-
-
-    def deposita(self, valor):
-        self._saldo += valor
-
-    def __str__(self):
-        return "[>> Codigo {} Saldo {}]".format(self._codigo, self._saldo)
-
-
-conta1 = ContaSalario(37)
+# conta1 = ContaSalario(37)
 # print(conta1)
 
-conta2 = ContaSalario(37)
+# conta2 = ContaSalario(37)
 # print(conta2)
 
 # Não são iguais. Porque, o objeto pode ser o mesmo, mas a referencia de memoria é diferente.
@@ -321,18 +323,95 @@ usuarios = [
 
 
 # Ordena em sequência
-print(sorted(idades2))
+# print(sorted(idades2))
 
 
 # Ordena a sequência ao contrario
-print(list(reversed(idades2)))
+# print(list(reversed(idades2)))
 
 
 # Ordena ao contrario e organiza a lista do menor para maior
-print(list(reversed(sorted(idades2))))
+# print(list(reversed(sorted(idades2))))
 
 # Organiza a lista chamando a função
-idades2.sort()
-print(idades2)
+# idades2.sort()
+# print(idades2)
+
+from functools import total_ordering
+
+@total_ordering
+class ContaSalario:
+    def __init__(self, codigo):
+        self._codigo = codigo
+        self._saldo = 0
 
 
+    def deposita(self, valor):
+        self._saldo += valor
+
+
+    def __str__(self):
+        return "[>> Codigo {} Saldo {}]".format(self._codigo, self._saldo)
+
+    def __eq__(self, other):
+        if type(other) != ContaSalario:
+            return False
+
+        return self._codigo == other._codigo and self._saldo == other._saldo
+
+
+    def __lt__(self, other):
+        if self._saldo != other._saldo:
+            return self._saldo < other._saldo
+
+        return self._codigo < other._codigo
+
+
+
+
+# conta_do_thiago = ContaSalario(17)
+# conta_do_thiago.deposita(500)
+#
+# conta_da_rhebeca = ContaSalario(3)
+# conta_da_rhebeca.deposita(1000)
+#
+# conta_da_julia = ContaSalario(133)
+# conta_da_julia.deposita(510)
+#
+# contas = [conta_da_julia, conta_do_thiago, conta_da_rhebeca]
+
+# for conta in contas:
+#     print(conta)
+
+# Um método customizado de como pegar os valores do menor para o maior. (obs: só que esse método é muito feio, porque, eu estou pegando um método privado)
+# def extrai_saldo(conta):
+#     return conta._saldo
+#
+# for conta in sorted(contas, key=extrai_saldo):
+#     print(conta)
+
+# from operator import attrgetter
+#
+# for conta in sorted(contas, key=attrgetter("_saldo")):
+#     print(conta)
+
+# print(conta_do_thiago > conta_da_rhebeca)
+#
+# for conta in sorted(contas, reverse=True):
+#     print(conta)
+
+# conta_do_thiago = ContaSalario(1700)
+# conta_do_thiago.deposita(500)
+#
+# conta_da_rhebeca = ContaSalario(3)
+# conta_da_rhebeca.deposita(500)
+#
+# conta_da_julia = ContaSalario(133)
+# conta_da_julia.deposita(1000)
+#
+# contas = [conta_do_thiago, conta_da_rhebeca, conta_da_julia]
+#
+# for conta in sorted(contas, key=attrgetter("_saldo", "_codigo")):
+#     print(conta)
+#
+# print(conta_do_thiago == conta_do_thiago)

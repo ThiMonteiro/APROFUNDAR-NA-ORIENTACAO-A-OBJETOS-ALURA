@@ -21,7 +21,7 @@ na Orientação a Objetos**, nesse módulo aprendemos:
 
 **Cerificado de conclusão do curso:**
 
-<img src="C:\Users\Thiago Monteiro\PycharmProjects\APROFUNDAR NA ORIENTACAO A OBJETOS - ALURA\python - avançando na orientação a objetos\Thiago Monteiro de Sousa - Curso - Alura_page-0001.jpg">
+<img src="python - avançando na orientação a objetos\Thiago Monteiro de Sousa - Curso - Alura_page-0001.jpg">
 
 Nosso **segundo** curso no **segundo módulo** foi **Python: String em
 Python: extraindo informações de uma URL**, nesse módulo aprendemos:
@@ -34,8 +34,17 @@ Python: extraindo informações de uma URL**, nesse módulo aprendemos:
 
 **Cerificado de conclusão do curso:**
 
-<img src="C:\Users\Thiago Monteiro\PycharmProjects\APROFUNDAR NA ORIENTACAO A OBJETOS - ALURA\string em python - extraindo informações de uma url\Thiago Monteiro de Sousa - Curso - Alura_page-0002.jpg">
+<img src="string em python - extraindo informações de uma url\Thiago Monteiro de Sousa - Curso - Alura_page-0002.jpg">
 
+Em nosso **terceiro** curso no segundo módulo que foi **Python: Collections
+parte 1: listas e tuplas.** Nesse módulo aprendemos:
+
+* Utilizamos listas e tuplas adequadamente;
+* Entendemos o papel do __eq__ e comparadores;
+* Utilizamos polimorfismo com suas coleções;
+* Entendemos os problemas da mutabilidade de listas.
+
+<img src="python collections parte 1 - listas e tuplas\Thiago Monteiro de Sousa - Curso - Alura_page-0003.jpg">
 
 
 
