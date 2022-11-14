@@ -46,5 +46,15 @@ parte 1: listas e tuplas.** Nesse módulo aprendemos:
 
 <img src="python collections parte 1 - listas e tuplas\Thiago Monteiro de Sousa - Curso - Alura_page-0003.jpg">
 
+Terminamos o **segundo módulo** com nosso **quarto** de **Python Collections 
+parte 2: conjuntos e dicionários.** Nesse módulo aprendemos:
+
+* Trabalhamos com conjuntos e dicionários;
+* Entendemos quando listas e tuplas não são estruturas adequadas;
+* Utilizamos variações de dicionários;
+* Trabalhamos com diversas coleções ao mesmo tempo.
+
+<img src="python - collections parte 2 - conjutos e dicionários\Certificado - Thiago Monteiro de Sousa - Curso - Alura_page-0004.jpg">
+
 
 
